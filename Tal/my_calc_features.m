@@ -11,7 +11,7 @@ for k = 1:sam_num(1)
     ax = atx(k,:);
     ay = aty(k,:);
     az = atz(k,:);
-    
+    size(ax)
     % Extract features
     f = featuresFromBuffer(ax, ay, az, fs);
     feat=[feat; f];

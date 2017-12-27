@@ -2,8 +2,9 @@
 %in order to stablize the frequency
 
 
- %dataFromWeb=webread('https://collectsensorsdata.firebaseio.com/data/fs-50-v2/samples/rightPocket/accelerometer.json');
- %save('myRawData-5-6-1.0.mat','dataFromWeb');
+% dataFromWeb=webread('https://collectsensorsdata.firebaseio.com/data/fs-50-v2/samples/rightPocket/accelerometer.json');
+% save('..\data\myRawData-5-6-1.0.mat','dataFromWeb');
+%% 
  
  load('myRawData-5-6-1.0.mat');
  my_format_data;
@@ -13,6 +14,7 @@ actnames={'Walking','WalkingUpstairs','WalkingDownstairs','Sitting','Standing','
 actlabels=actnames;
 %delete last ~~6 seconds
 myindex=1;
+%%
 for index=1:length(data)
     
     %subjects(index).totalacc=sh_subjects(index).totalacc(1:length(sh_subjects(index).totalacc)-6*fs,:);
@@ -32,7 +34,7 @@ for index=1:length(data)
         myindex=myindex+1;
     end
 end
-
+%%
 atx=[];
 aty=[];
 atz=[];

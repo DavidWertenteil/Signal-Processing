@@ -6,8 +6,8 @@
 %clear;
 load('myBufferData.mat');
 h=histogram(y);
-numOfRecordsPerAct=h.Values;
+numOfRecordsPerAct=h.Values
 % numOfRecordsPerAct(7)=numOfRecordsPerAct(7)+66;
 % numOfRecordsPerAct(8)=numOfRecordsPerAct(8)+61;
-numOfSeconds=numOfRecordsPerAct.*(300/50);
-numOfMinutes=numOfSeconds./60;
+numOfSeconds=numOfRecordsPerAct.*(300/50)
+numOfMinutes=numOfSeconds./60
