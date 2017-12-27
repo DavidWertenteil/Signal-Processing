@@ -21,6 +21,8 @@ sel = (id == Act.(actstr));
 datasel = data(sel);
 
 % Plot histogram with predefine binwidth
+% All rest of the file is to orgnize the data. this 
+% function is the importent one/
 h = histogram(datasel,'BinWidth',0.5); 
 
 % Customizations - colouring and labeling
