@@ -3,16 +3,8 @@
 classdef Act < uint32
    enumeration
       Walking (1)
-      WalkingUpstairs (2)
-      WalkingDownstairs (3)
-      Sitting (4)
-      Standing (5)
-      Laying (6)
-      DragLimp (7)
-      JumpLimp (8)
-      PersonFall (9)
-      PhoneFall (10)
-      Running(11)
-      AustoLimp(12)
+      DragLimp (2)
+      JumpLimp (3)
+      AustoLimp(4)
    end
 end
