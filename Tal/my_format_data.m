@@ -6,7 +6,15 @@ for i = 1:numel(names)
     temp=getfield(dataFromWeb(1),names{i});
     tempsize=size(temp);
     for j=1:tempsize(1)
-        idvec(j)=temp(j).activityNumber;
+        if(temp(j).activityNumber == 7)
+            idvec(j)=2;
+        elseif (temp(j).activityNumber == 8)
+            idvec(j)=3;
+        elseif (temp(j).activityNumber == 12)
+            idvec(j)=4;
+        else
+            idvec(j)=1;
+        end
         
         temaccarr=temp(j).values;
         
@@ -16,4 +24,4 @@ for i = 1:numel(names)
     data(i).totalacc=accvec;
     clear('idvec','accvec');
 end
-save ('..\data\myFormatedData.mat','data');
+save ('.\data\myFormatedData.mat','data');

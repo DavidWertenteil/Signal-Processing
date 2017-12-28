@@ -8,11 +8,12 @@
 
 
 %to read data from  web and save it locally
-%   dataFromWeb=webread('https://collectsensorsdata.firebaseio.com/data/fs-50-v2/samples/rightPocket/accelerometer.json');
-%   save('myRawData-5-6-1.0.mat','dataFromWeb');
-
+%options = weboptions('ContentType','json');
+%dataFromWeb=webread('https://collectsensorsdata.firebaseio.com/data/fs-50-v2/samples/rightPocket/accelerometer.json', options);
+save('./data/myRawData-5-6-1.0.mat','dataFromWeb');
+%%
 %read data from local
-load('myRawData-5-6-1.0.mat');
+%load('myRawData-5-6-1.0.mat');
  
 %format the data from json to our matrix
 my_format_data
@@ -21,7 +22,7 @@ my_format_data
 fs=50;
 
 %the acts
-actnames={'Walking','WalkingUpstairs','WalkingDownstairs','Sitting','Standing','Laying','DragLimp','JumpLimp','PersonFall','PhoneFall','Running','AustoLimp'};
+actnames={'Walking','DragLimp','JumpLimp','AustoLimp'};
 actlabels=actnames;
 myindex=1;
 %delete last 3 seconds(the fs is not fixed) - beacuse the fs isnt fixed,
@@ -61,5 +62,5 @@ aby = filter(fhp,aty);
 abz = filter(fhp,atz);
 
 t = (1/fs) * (0:line-1)';
-save('..\data\myBufferData.mat','abx','aby','abz','atx','aty','atz','actlabels','actnames','fs','t','y');
+save('.\data\myBufferData.mat','abx','aby','abz','atx','aty','atz','actlabels','actnames','fs','t','y');
     
