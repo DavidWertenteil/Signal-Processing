@@ -24,4 +24,4 @@ for i = 1:numel(names)
     data(i).totalacc=accvec;
     clear('idvec','accvec');
 end
-save ('..\data\myFormatedData.mat','data');
+save ('.\data\myFormatedData.mat','data');

@@ -60,7 +60,7 @@ figure
 plotconfusion(tgttest,scoretest)
 [a,b,c,d]=confusion(tgttest,scoretest);
 RunTrainedNetworkOnBufferedData;
-save('..\data\myTrainedNetwork.mat','net','actnames');
+save('.\data\myTrainedNetwork.mat','net','actnames');
 
 
 %this created a net that will idetify future data, 
